@@ -1,0 +1,52 @@
+{
+  "name": "first-react-native-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-native-scripts": "0.0.40",
+    "jest-expo": "~18.0.0",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^5.0.0",
+    "expo": "^18.0.3",
+    "firebase": "^4.1.3",
+    "immutable": "^3.8.1",
+    "moment": "^2.18.1",
+    "native-base": "^2.1.5",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.45.1",
+    "react-native-calendars": "^1.4.0",
+    "react-native-datepicker": "^1.6.0",
+    "react-native-fontawesome": "^5.7.0",
+    "react-native-material-bottom-navigation": "^0.5.1",
+    "react-native-material-kit": "^0.4.1",
+    "react-native-material-tabs": "^3.0.2",
+    "react-native-material-ui": "^1.12.0",
+    "react-native-modal": "^2.4.0",
+    "react-native-modal-datetime-picker": "^4.7.0",
+    "react-native-modal-wrapper": "^2.3.0",
+    "react-native-modalbox": "^1.4.0",
+    "react-native-swipeout": "^2.1.3",
+    "react-native-swiper": "^1.5.4",
+    "react-native-tab-view": "0.0.67",
+    "react-native-textinput-effects": "^0.3.1",
+    "react-native-vector-icons": "^4.2.0",
+    "react-native-vertical-swipe": "^1.0.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1",
+    "redux-saga": "^0.15.4",
+    "reduxsauce": "^0.5.0"
+  }
+}

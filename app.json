@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "Your App Name",
+    "icon": "./todoIcon.png",
+
+    "version": "1.0.0",
+    "slug": "first-todo-app",
+    "sdkVersion": "18.0.0",
+    "ios": {
+      "bundleIdentifier": "com.bhprtk.todo"
+    },
+    "android": {
+    "package": "com.bhprtk.todo"
+    }
+  }
+}
