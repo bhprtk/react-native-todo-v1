@@ -15,6 +15,7 @@ import DisplayNotDone from '../DisplayTodo/DisplayNotDone/DisplayNotDone';
 import DisplayTodaysImportant from '../DisplayTodo/DisplayTodaysImportant';
 import EditTodoModal from '../DisplayTodo/EditTodoModal';
 import Header from '../DisplayTodo/Header';
+import NoTodoComponent from '../DisplayTodo/NoTodoComponent/NoTodoComponent';
 import ToolbarComponent from './ToolbarComponent';
 
 class DisplayTodoComponent extends Component {
@@ -38,7 +39,6 @@ class DisplayTodoComponent extends Component {
 	}
 
 	_changeNav = val => {
-		console.log ('val:', val)
 		this.setState({ nav: val })
 	}
 
@@ -141,21 +141,21 @@ class DisplayTodoComponent extends Component {
 						headerText={headerText}
 						openDrawer={this.props.openDrawer}/>
 
-					<ScrollView>
-						{
-							this.props.selectedDayTodos.noTasks ?
-							<Text>Swipe right to add a todo</Text>
-							:
+					{
+						this.props.selectedDayTodos.noTasks ?
+						<NoTodoComponent />
+						:
+						<ScrollView>
 							displayTodo
-						}
-						<EditTodoModal
-							currentUser={this.props.currentUser}
-							editModalVisible={this.state.editModalVisible}
-							hideModal={this._hideModal}
-							selectedDay={selectedDay}
-							todo={this.state.taskToEdit}
-							todoKey={this.state.todoKey}/>
-					</ScrollView>
+							<EditTodoModal
+								currentUser={this.props.currentUser}
+								editModalVisible={this.state.editModalVisible}
+								hideModal={this._hideModal}
+								selectedDay={selectedDay}
+								todo={this.state.taskToEdit}
+								todoKey={this.state.todoKey}/>
+						</ScrollView>
+					}
 
 					<View>
 						<BottomNavigationComponent
